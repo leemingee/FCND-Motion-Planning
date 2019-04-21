@@ -123,7 +123,7 @@ def prune_path(path):
 #### 1. Does it work?
 It works!
 
-![Test Case]((./misc/fcnd-project2-motion-planning.gif)
+![Test Case](./misc/fcnd-project2-motion-planning.gif)
 
 
 	
