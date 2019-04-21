@@ -122,11 +122,9 @@ class MotionPlanning(Drone):
         # TODO: read lat0, lon0 from colliders into floating point values
         # The first line of colliders.csv provides the latitude and longitude that we will call home
         f = open('colliders.csv')
-        line_list = f.readline().rstrip().split(', ')
-        line_list_lat = line_list[0].split()
-        line_list_lon = line_list[1].split()
-        lat0 = float(line_list_lat[1])
-        lon0 = float(line_list_lon[1])
+        first_line = f.readline().rstrip().split(', ') # ['lat0 37.792480', 'lon0 -122.397450']
+        lat0 = float(first_line[0].split()[1])
+        lon0 = float(first_line[1].split()[1])
 
         # TODO: set home position to (lon0, lat0, 0)
         # After extracting those latitude and longitude values from the file, we actually set it as the home.
